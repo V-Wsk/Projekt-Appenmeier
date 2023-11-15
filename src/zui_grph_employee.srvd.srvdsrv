@@ -1,0 +1,4 @@
+@EndUserText.label: 'Mitarbeiter Service View'
+define service ZUI_GRPH_EMPLOYEE {
+  expose ZC_GRPH_EMPLOYEE as Employee;
+}
