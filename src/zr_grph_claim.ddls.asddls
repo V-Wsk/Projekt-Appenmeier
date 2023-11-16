@@ -2,9 +2,10 @@
 @EndUserText.label: 'Anspruch Base View'
 define view entity ZR_GRPH_Claim as select from zgrph_claim
 association to parent ZR_GRPH_Employee as _Employee
-    on $projection.Id = _Employee.Id
+    on $projection.EmployeeId = _Employee.Id
 {
     key id as Id,
+    employee_id as EmployeeId,
     employee as Employee,
     year_claim as YearClaim,
     vacation_days as VacationDays,

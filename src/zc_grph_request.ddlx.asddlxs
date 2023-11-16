@@ -19,6 +19,10 @@ annotate view ZC_GRPH_Request with
   /* Fields */
   @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
   Id;
+  
+  @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
+  EmployeeId;
+  
   @UI.lineItem: [{ position: 10 }]
   @UI.fieldGroup: [{ position: 10, qualifier: 'RequestDetails' }]
   Applicant;
@@ -38,12 +42,12 @@ annotate view ZC_GRPH_Request with
   @UI.fieldGroup: [{ position: 60, qualifier: 'RequestDetails' }]
   Status;
 
-  @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
-  CreatedBy;
   @UI.fieldGroup: [{ position: 30, qualifier: 'AdminData' }]
-  CreatedAt;
+  CreatedBy;
   @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]
-  LastChangedBy;
+  CreatedAt;
   @UI.fieldGroup: [{ position: 50, qualifier: 'AdminData' }]
+  LastChangedBy;
+  @UI.fieldGroup: [{ position: 60, qualifier: 'AdminData' }]
   LastChangedAt;
 }

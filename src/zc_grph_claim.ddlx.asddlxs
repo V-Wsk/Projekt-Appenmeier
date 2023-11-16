@@ -19,6 +19,10 @@ annotate view ZC_GRPH_Claim with
   /* Fields */
   @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
   Id;
+  
+  @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
+  EmployeeId;
+  
   @UI.lineItem: [{ position: 10 }]
   @UI.fieldGroup: [{ position: 10, qualifier: 'ClaimDetails' }]
   Employee;
@@ -29,13 +33,13 @@ annotate view ZC_GRPH_Claim with
   @UI.fieldGroup: [{ position: 30, qualifier: 'ClaimDetails' }]
   VacationDays;
   
-  @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
-  CreatedBy;
   @UI.fieldGroup: [{ position: 30, qualifier: 'AdminData' }]
-  CreatedAt;
+  CreatedBy;
   @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]
-  LastChangedBy;
+  CreatedAt;
   @UI.fieldGroup: [{ position: 50, qualifier: 'AdminData' }]
+  LastChangedBy;
+  @UI.fieldGroup: [{ position: 60, qualifier: 'AdminData' }]
   LastChangedAt;
  
 

@@ -30,11 +30,11 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     DELETE FROM zGRPH_employee.
     " Delete Claims
     DELETE FROM zGRPH_claim.
-    " Delete Request
+    " Delete Requests
     DELETE FROM zGRPH_request.
 
 
-    " Create Employee
+    " Create Employee 1
     employee-id = cl_system_uuid=>create_uuid_x16_static( ).
     employee-employee_number = '000001'.
     employee-forename = 'Hans'.
@@ -49,7 +49,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
     APPEND employee TO employees.
 
-    " Create Employee
+    " Create Employee 2
     employee-id = cl_system_uuid=>create_uuid_x16_static( ).
     employee-employee_number = '000002'.
     employee-forename = 'Lisa'.
@@ -64,7 +64,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
     APPEND employee TO employees.
 
-    " Create Employee
+    " Create Employee 3
     employee-id = cl_system_uuid=>create_uuid_x16_static( ).
     employee-employee_number = '000003'.
     employee-forename = 'Petra'.
@@ -80,8 +80,8 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     APPEND employee TO employees.
 
 
-    " Create Claim
-    claim-id = '000001'.
+    " Create Claim 1
+    claim-id = cl_system_uuid=>create_uuid_x16_static( ).
     claim-employee = '000001'.
     claim-year_claim = '2022'.
     claim-vacation_days = '30'.
@@ -96,7 +96,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Claim 2
-    claim-id = '000002'.
+    claim-id = cl_system_uuid=>create_uuid_x16_static( ).
     claim-employee = '000001'.
     claim-year_claim = '2023'.
     claim-vacation_days = '30'.
@@ -111,7 +111,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Claim 3
-    claim-id = '000003'.
+    claim-id = cl_system_uuid=>create_uuid_x16_static( ).
     claim-employee = '000002'.
     claim-year_claim = '2023'.
     claim-vacation_days = '30'.
@@ -126,7 +126,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Claim 4
-    claim-id = '000004'.
+    claim-id = cl_system_uuid=>create_uuid_x16_static( ).
     claim-employee = '000003'.
     claim-year_claim = '2023'.
     claim-vacation_days = '7'.
@@ -140,7 +140,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Request 1
-    request-id = '000001'.
+    request-id = cl_system_uuid=>create_uuid_x16_static( ).
     request-applicant = '000001'.
     request-approver = '000002'.
     request-start_date = '20220701'.
@@ -158,7 +158,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Request 2
-    request-id = '000002'.
+    request-id = cl_system_uuid=>create_uuid_x16_static( ).
     request-applicant = '000001'.
     request-approver = '000002'.
     request-start_date = '20221227'.
@@ -176,7 +176,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Request 3
-    request-id = '000003'.
+    request-id = cl_system_uuid=>create_uuid_x16_static( ).
     request-applicant = '000001'.
     request-approver = '000002'.
     request-start_date = '20221228'.
@@ -194,7 +194,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Request 4
-    request-id = '000004'.
+    request-id = cl_system_uuid=>create_uuid_x16_static( ).
     request-applicant = '000001'.
     request-approver = '000002'.
     request-start_date = '20230527'.
@@ -212,7 +212,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Request 5
-    request-id = '000005'.
+    request-id = cl_system_uuid=>create_uuid_x16_static( ).
     request-applicant = '000001'.
     request-approver = '000002'.
     request-start_date = '20231220'.
@@ -230,7 +230,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
 
 
     " Create Request 6
-    request-id = '000006'.
+    request-id = cl_system_uuid=>create_uuid_x16_static( ).
     request-applicant = '000002'.
     request-approver = '000003'.
     request-start_date = '20231227'.

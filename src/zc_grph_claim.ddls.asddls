@@ -4,6 +4,7 @@
 define view entity ZC_GRPH_Claim as projection on ZR_GRPH_Claim
 {
     key Id,
+    EmployeeId,
     Employee,
     YearClaim,
     VacationDays,

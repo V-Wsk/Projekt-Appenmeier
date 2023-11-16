@@ -4,6 +4,7 @@
 define view entity ZC_GRPH_Request as projection on ZR_GRPH_Request
 {
     key Id,
+    EmployeeId,
     Applicant,
     Approver,
     StartDate,

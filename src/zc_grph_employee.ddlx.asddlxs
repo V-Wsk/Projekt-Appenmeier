@@ -13,7 +13,9 @@ annotate entity ZC_GRPH_EMPLOYEE with
   @UI.facet:
   [
   { position: 10, targetQualifier: 'EmployeeDetails', label: 'Employee Details', type: #FIELDGROUP_REFERENCE },
-  { position: 20, targetQualifier: 'AdminData', label: 'Administrative Data', type: #FIELDGROUP_REFERENCE }
+  { position: 15, targetQualifier: '_Claims', label: 'Claims', type: #LINEITEM_REFERENCE },
+  { position: 20, targetQualifier: '_Requests', label: 'Requests', type: #LINEITEM_REFERENCE },
+  { position: 25, targetQualifier: 'AdminData', label: 'Administrative Data', type: #FIELDGROUP_REFERENCE }
   ]
 
   /* Field */
