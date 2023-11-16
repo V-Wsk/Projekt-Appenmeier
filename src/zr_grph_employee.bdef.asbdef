@@ -1,0 +1,56 @@
+managed implementation in class zbp_r_grph_employee unique;
+strict ( 2 );
+
+/* Root Entity Employee*/
+define behavior for ZR_GRPH_Employee alias Employee
+persistent table zgrph_employee
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  association _Claims { create; }
+  association _Requests { create; }
+
+  field ( readonly, numbering : managed ) id;
+
+  mapping for ZGRPH_Employee
+{
+    CreatedAt = created_at;
+    CreatedBy = created_by;
+    EmployeeNumber = employee_number;
+    EntryDate = entry_date;
+    Forename = forename;
+    Id = id;
+    LastChangedAt = last_changed_at;
+    LastChangedBy = last_changed_by;
+    Surename = surename;
+    }
+
+}
+
+define behavior for ZR_GRPH_Claim //alias <alias_name>
+persistent table zgrph_claim
+lock dependent by _Employee
+authorization dependent by _Employee
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Id;
+  association _Employee;
+}
+
+define behavior for ZR_GRPH_Request //alias <alias_name>
+persistent table zgrph_request
+lock dependent by _Employee
+authorization dependent by _Employee
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Id;
+  association _Employee;
+}

@@ -1,4 +1,6 @@
 @EndUserText.label: 'Mitarbeiter Service View'
 define service ZUI_GRPH_EMPLOYEE {
   expose ZC_GRPH_EMPLOYEE as Employee;
+  expose ZC_GRPH_Claim    as Claim;
+  expose ZC_GRPH_Request  as Request;
 }

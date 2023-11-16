@@ -1,0 +1,12 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_GRPH_EMPLOYEE //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Claims { create; }
+  use association _Requests { create; }
+}
