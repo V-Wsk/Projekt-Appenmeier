@@ -19,5 +19,9 @@ define root view entity ZC_GRPH_EMPLOYEE
       CreatedBy,
       CreatedAt,
       LastChangedBy,
-      LastChangedAt
+      LastChangedAt,
+      
+      /*Associations*/
+      _Claims : redirected to composition child ZC_GRPH_Claim,
+      _Requests : redirected to composition child ZC_GRPH_Request
 }
