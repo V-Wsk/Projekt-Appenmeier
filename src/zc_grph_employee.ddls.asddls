@@ -7,6 +7,7 @@ define root view entity ZC_GRPH_EMPLOYEE
   as projection on ZR_GRPH_Employee
 {
   key Id,
+      @Consumption.valueHelpDefinition: [{entity: {name : 'ZI_GRPH_StatusVH', element: 'Status'} }]
       EmployeeNumber,
       @Consumption.valueHelpDefinition: [{ entity : {name :'ZI_GRPH_APPROVERVH', element: 'Forename'}} ]
       @Search.defaultSearchElement: true

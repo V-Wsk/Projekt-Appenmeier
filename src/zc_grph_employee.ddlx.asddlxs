@@ -3,8 +3,8 @@
 {
     typeNamePlural: 'Employees',
     typeName: 'Employee',
-    title.value: 'EmployeeNumber',
-    description.value: 'Id'
+    title.value: 'Id',
+    description.value: 'EmployeeNumber'
 }
 annotate entity ZC_GRPH_EMPLOYEE with
 {
@@ -13,8 +13,8 @@ annotate entity ZC_GRPH_EMPLOYEE with
   @UI.facet:
   [
   { position: 10, targetQualifier: 'EmployeeDetails', label: 'Employee Details', type: #FIELDGROUP_REFERENCE },
-  { position: 15, targetQualifier: '_Claims', label: 'Claims', type: #LINEITEM_REFERENCE },
-  { position: 20, targetQualifier: '_Requests', label: 'Requests', type: #LINEITEM_REFERENCE },
+  { position: 15, targetElement: '_Claims', label: 'Claims', type: #LINEITEM_REFERENCE },
+  { position: 20, targetElement: '_Requests', label: 'Requests', type: #LINEITEM_REFERENCE },
   { position: 25, targetQualifier: 'AdminData', label: 'Administrative Data', type: #FIELDGROUP_REFERENCE }
   ]
 

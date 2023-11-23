@@ -10,6 +10,7 @@ define view entity ZC_GRPH_Request as projection on ZR_GRPH_Request
     StartDate,
     EndDate,
     CommentRequest,
+     @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_GRPH_StatusVH', element: 'Status' } }]
     Status,
     CreatedBy,
     CreatedAt,

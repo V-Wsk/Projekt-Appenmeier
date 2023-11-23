@@ -6,15 +6,11 @@ CLASS zgrph_generator_1 DEFINITION
   PUBLIC SECTION.
 
     INTERFACES if_oo_adt_classrun .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
 ENDCLASS.
 
 
 
 CLASS zgrph_generator_1 IMPLEMENTATION.
-
-
   METHOD if_oo_adt_classrun~main.
 
     DATA employees TYPE TABLE OF ZGRPH_employee.
@@ -46,7 +42,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     employee-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD employee-created_at.
     GET TIME STAMP FIELD employee-last_changed_at.
-
     APPEND employee TO employees.
 
     " Create Employee 2
@@ -61,7 +56,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     employee-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD employee-created_at.
     GET TIME STAMP FIELD employee-last_changed_at.
-
     APPEND employee TO employees.
 
     " Create Employee 3
@@ -76,7 +70,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     employee-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD employee-created_at.
     GET TIME STAMP FIELD employee-last_changed_at.
-
     APPEND employee TO employees.
 
 
@@ -91,7 +84,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD claim-created_at.
     claim-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD claim-last_changed_at.
-
     APPEND claim TO claims.
 
 
@@ -106,7 +98,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD claim-created_at.
     claim-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD claim-last_changed_at.
-
     APPEND claim TO claims.
 
 
@@ -121,7 +112,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD claim-created_at.
     claim-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD claim-last_changed_at.
-
     APPEND claim TO claims.
 
 
@@ -136,7 +126,7 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD claim-created_at.
     claim-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD claim-last_changed_at.
-
+    APPEND claim TO claims.
 
 
     " Create Request 1
@@ -153,7 +143,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD request-created_at.
     request-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD request-last_changed_at.
-
     APPEND request TO requests.
 
 
@@ -171,7 +160,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD request-created_at.
     request-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD request-last_changed_at.
-
     APPEND request TO requests.
 
 
@@ -189,7 +177,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD request-created_at.
     request-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD request-last_changed_at.
-
     APPEND request TO requests.
 
 
@@ -207,7 +194,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD request-created_at.
     request-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD request-last_changed_at.
-
     APPEND request TO requests.
 
 
@@ -225,7 +211,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD request-created_at.
     request-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD request-last_changed_at.
-
     APPEND request TO requests.
 
 
@@ -243,7 +228,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     GET TIME STAMP FIELD request-created_at.
     request-last_changed_by = 'GENERATOR'.
     GET TIME STAMP FIELD request-last_changed_at.
-
     APPEND request TO requests.
 
 
@@ -253,8 +237,6 @@ CLASS zgrph_generator_1 IMPLEMENTATION.
     INSERT ZGRPH_claim FROM TABLE @claims.
     " Insert Employees
     INSERT ZGRPH_employee FROM TABLE @employees.
-
-
 
   ENDMETHOD.
 ENDCLASS.
