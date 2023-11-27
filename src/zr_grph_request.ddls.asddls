@@ -2,7 +2,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 define view entity ZR_GRPH_Request as select from zgrph_request
 association to parent ZR_GRPH_Employee as _Employee
-    on $projection.EmployeeId = _Employee.Id
+    on $projection.Applicant = _Employee.Id
 {
     key id as Id,
     employee_id as EmployeeId,
